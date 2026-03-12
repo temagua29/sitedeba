@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Indie+Flower&display=swap');
+
+body {
+    background-color: #fff0f3;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.folha-a4 {
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(255, 182, 193, 0.5);
+    position: relative;
+    border: 1px solid #ffccd5;
+}
+
+/* Um detalhe de coração no fundo da carta */
+.folha-a4::before {
+    content: "❤️";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.voltar {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: #ff758c;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+}
+
+header h2 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: #d63384;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.conteudo p {
+    font-family: 'Indie Flower', cursive; /* Fonte que parece escrita à mão */
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.assinatura {
+    margin-top: 60px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.linha {
+    border-top: 2px dashed #ffb6c1;
+    width: 200px;
+    margin: 0 auto 10px auto;
+}
+
+.assinatura p {
+    font-size: 1.8rem;
+    color: #d63384;
+}
+
+/* Copie isso para o final do style-inicio.css E do style-declaracao.css */
+.heart-animation {
+    position: fixed;
+    top: -10%;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
